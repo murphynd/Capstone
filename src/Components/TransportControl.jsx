@@ -6,7 +6,7 @@ import * as Tone from "tone";
 import { PausePlay } from "./pausePlay";
 import { InstrumentPannel } from "./InstrumentPannel";
 
-class TransportControl extends React.Component {
+export class TransportControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

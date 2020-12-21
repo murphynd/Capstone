@@ -1,6 +1,7 @@
 import React from "react";
 import { Kick } from "../Engines/Kick";
 import { Transport, Time } from "tone";
+import { Snare } from "../Engines/Snare";
 
 export class Instrument extends React.Component {
   constructor(props) {
@@ -27,6 +28,14 @@ export class Instrument extends React.Component {
         false,
       ],
     };
+    switch (props.engine) {
+      case "Kick":
+        this.sound = new Kick(this.ctx);
+        break;
+      case "Snare":
+        this.sound = new Snare(this.ctx);
+        break;
+    }
     Transport.loop = true;
     Transport.loopEnd = "1m";
   }
@@ -61,7 +70,7 @@ export class Instrument extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Kick Drum</button>
+        <button onClick={this.handleClick}>Instrument</button>
       </div>
     );
   }

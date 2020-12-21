@@ -8,12 +8,18 @@ export class InstrumentPannel extends React.Component {
     const childrenWithProps = React.Children.map(
       this.props.children,
       (child) => {
-        if (child) {
+        if (child.key === this.props.selectedInstruemnt) {
           return React.cloneElement(child, {
             steps: this.props.steps,
-            slected: true,
+            selected: true,
+          });
+        } else {
+          return React.cloneElement(child, {
+            steps: null,
+            selected: false,
           });
         }
+
         return child;
       }
     );
