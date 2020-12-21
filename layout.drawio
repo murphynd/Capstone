@@ -1,0 +1,52 @@
+<mxfile host="65bd71144e" modified="2020-12-21T18:28:37.397Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="Chii0Q-wbVCd8pKwIoNz" type="embed">
+    <diagram id="8r1odn9fo8h4a8jPreBq" name="Page-1">
+        <mxGraphModel dx="789" dy="1547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="-310" width="780" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="BPM" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#333333;align=center;strokeColor=#333333;fontColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="-270" width="210" height="16.88" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Play/Pause" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#333333;align=center;strokeColor=#333333;fontColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="-270" width="210" height="16.88" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Steps" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#333333;align=center;strokeColor=#333333;fontColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="-40" width="630" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;div&gt;&lt;span&gt;Instrament pannel&lt;/span&gt;&lt;/div&gt;" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#666666;align=left;strokeColor=#4D4D4D;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="55" y="-228.5" width="740" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Inst 1" style="rounded=1;fillColor=#0057D8;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="180" y="-201" width="575" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.atlassian.close;fillColor=#BA3200;strokeColor=none;html=1" vertex="1" parent="1">
+                    <mxGeometry x="80" y="-201" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Inst 2" style="rounded=1;fillColor=#0057D8;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="180" y="-160" width="575" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Inst 3" style="rounded=1;fillColor=#0057D8;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="180" y="-120" width="575" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="8" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Transport" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="-300" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Engine 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="-194.5" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Engine 2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="-147" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Engine 3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="-113.5" width="60" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
