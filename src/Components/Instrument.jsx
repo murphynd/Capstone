@@ -29,14 +29,9 @@ export class Instrument extends React.Component {
     };
     Transport.loop = true;
     Transport.loopEnd = "1m";
-    //this.tp = new Transport();
-    // console.log(Transport);
-
-    // Transport.bpm.value = 120;
-    // Transport.schedule(this.startLoop, "0");
   }
   componentDidUpdate() {
-    if (this.props.steps && this.props.steps === this.state.steps) {
+    if (this.props.steps && !areEqual(this.props.steps, this.state.steps)) {
       this.setState({
         steps: this.props.steps.slice(0),
       });
@@ -47,7 +42,6 @@ export class Instrument extends React.Component {
     if (!this.props.steps) {
       return;
     }
-
     Transport.clear(this.loopId);
     const loop = (time) => {
       this.state.steps.forEach((s, i) => {
@@ -55,25 +49,28 @@ export class Instrument extends React.Component {
           this.sound.trigger(time + i * Time("16n").toSeconds());
         }
       });
-      // console.log("startloop", time);
-      // this.sound.trigger(time);
-      // this.sound.trigger(time + 0.5);
-      // this.sound.trigger(time + 1);
-      // this.sound.trigger(time + 1.5);
     };
     this.loopId = Transport.schedule(loop, "0");
   };
 
   handleClick = () => {
-    //this.kick.trigger(this.ctx.currentTime);
     Transport.start();
   };
 
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Instrument</button>
+        <button onClick={this.handleClick}>Kick Drum</button>
       </div>
     );
   }
 }
+
+export const areEqual = (ar1, ar2) => {
+  if (ar1.length !== ar2.length) return false;
+  let equal = true;
+  ar1.forEach((el, idx) => {
+    if (el !== ar2[idx]) equal = false;
+  });
+  return equal;
+};
