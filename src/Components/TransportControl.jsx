@@ -2,6 +2,7 @@ import React from "react";
 import { Instrument } from "./Instrument";
 import { Steps } from "./steps";
 import { Transport } from "tone";
+import * as Tone from "tone";
 import { PausePlay } from "./pausePlay";
 import { InstrumentPannel } from "./InstrumentPannel";
 
@@ -33,6 +34,7 @@ class TransportControl extends React.Component {
     Transport.stop();
   };
   play = () => {
+    Tone.start();
     Transport.start();
   };
 
