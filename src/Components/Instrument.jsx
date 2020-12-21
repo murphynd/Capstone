@@ -1,9 +1,8 @@
 import React from "react";
 import { Kick } from "../Engines/Kick";
 import { Transport } from "tone";
-import { Tone } from "tone/build/esm/core/Tone";
 
-class Instrument extends React.Component {
+export class Instrument extends React.Component {
   constructor(props) {
     super(props);
     this.ctx = new AudioContext();
@@ -16,7 +15,7 @@ class Instrument extends React.Component {
     // Transport.bpm.value = 120;
     // Transport.schedule(this.startLoop, "0");
   }
-  createLoop = (time) => {
+  createLoop = () => {
     Transport.clear(this.loopId);
     const loop = (time) => {
       console.log("startloop", time);
@@ -29,17 +28,16 @@ class Instrument extends React.Component {
   };
   handleClick = () => {
     //this.kick.trigger(this.ctx.currentTime);
-    Tone.start();
+
     this.createLoop();
     Transport.start();
   };
 
   render() {
     return (
-      <div className="Button">
+      <div>
         <button onClick={this.handleClick}>Instrument</button>
       </div>
     );
   }
 }
-export default Instrument;
