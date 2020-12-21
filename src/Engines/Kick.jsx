@@ -1,6 +1,3 @@
-let ctx = AudioContext;
-let osc = OscillatorNode;
-let gain = GainNode;
 export class Kick {
   constructor(ctx) {
     this.ctx = ctx;
@@ -20,11 +17,12 @@ export class Kick {
       return;
     }
     this.setup();
+
     this.osc.frequency.setValueAtTime(this.tone, time + 0.001);
     this.gain.gain.linearRampToValueAtTime(this.volume, time + 0.01);
     this.osc.frequency.exponentialRampToValueAtTime(1, time, this.decay);
     this.gain.gain.linearRampToValueAtTime(0, time + this.decay + 0.1);
-    thisosc.start(time);
+    this.osc.start(time);
     this.osc.stop(time + this.decay + 0.1);
   }
   setTone = (tone) => {
