@@ -1,12 +1,12 @@
 import React from "react";
 
-import Transport from "./Components/Transport";
+import TransportControl from "./Components/TransportControl";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <React.Fragment>
-      <Transport />
+      <TransportControl />
     </React.Fragment>
   );
 }

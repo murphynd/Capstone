@@ -1,8 +1,11 @@
 import React from "react";
 import { Instrument } from "./Instrument";
 import { Steps } from "./steps";
+import { Transport } from "tone";
+import { PausePlay } from "./pausePlay";
+import { InstrumentPannel } from "./InstrumentPannel";
 
-class Transport extends React.Component {
+class TransportControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,6 +29,13 @@ class Transport extends React.Component {
       ],
     };
   }
+  pause = () => {
+    Transport.stop();
+  };
+  play = () => {
+    Transport.start();
+  };
+
   handleStepChange = (id) => {
     const s = this.state.steps;
     s[id] = !s[id];
@@ -37,7 +47,10 @@ class Transport extends React.Component {
     return (
       <div>
         <h1 style={{ color: "black" }}>ThumP</h1>
-        <Instrument />
+        <PausePlay play={this.play} pause={this.pause} />
+        <InstrumentPannel steps={this.state.steps}>
+          <Instrument />
+        </InstrumentPannel>
         <Steps
           handleStepChange={this.handleStepChange}
           steps={this.state.steps}
@@ -46,4 +59,4 @@ class Transport extends React.Component {
     );
   }
 }
-export default Transport;
+export default TransportControl;

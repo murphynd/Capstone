@@ -36,7 +36,7 @@ export class Instrument extends React.Component {
     // Transport.schedule(this.startLoop, "0");
   }
   componentDidUpdate() {
-    if (this.props.steps && this.props.steps !== this.state.steps) {
+    if (this.props.steps && this.props.steps === this.state.steps) {
       this.setState({
         steps: this.props.steps.slice(0),
       });

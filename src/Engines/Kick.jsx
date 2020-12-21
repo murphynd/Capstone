@@ -13,7 +13,7 @@ export class Kick {
     this.gain.connect(this.ctx.destination);
   }
   trigger(time) {
-    if (this.volume == 0) {
+    if (this.volume === 0) {
       return;
     }
     this.setup();

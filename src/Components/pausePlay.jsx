@@ -6,7 +6,7 @@ export class PausePlay extends React.Component {
   }
   handleClick = () => {
     if (this.state.playing) {
-      thisprops.pause();
+      this.props.pause();
     } else {
       this.props.play();
     }

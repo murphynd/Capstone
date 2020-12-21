@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 
 export class InstrumentPannel extends React.Component {
   constructor(props) {
