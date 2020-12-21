@@ -1,10 +1,22 @@
-import React from "react";
+import React, { Children } from "react";
 
-class InstrumentPannel extends React.Component {
+export class InstrumentPannel extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
+    const childrenWithProps = React.Children.map(
+      this.props.children,
+      (child) => {
+        if (child) {
+          return React.cloneElement(child, {
+            steps: this.props.steps,
+            slected: true,
+          });
+        }
+        return child;
+      }
+    );
     return (
       <div
         style={{
@@ -13,7 +25,8 @@ class InstrumentPannel extends React.Component {
           justifyContent: "space-between",
         }}
       >
-        {this.props.children}
+        {childrenWithProps}
+        {/* {this.props.children} */}
       </div>
     );
   }
