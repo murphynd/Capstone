@@ -1,6 +1,6 @@
 import React from "react";
 
-class TransportControl extends React.Component {
+class Transport extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -12,4 +12,4 @@ class TransportControl extends React.Component {
     );
   }
 }
-export default TransportControl;
+export default Transport;

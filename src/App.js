@@ -1,12 +1,12 @@
 import React from "react";
 import Instrument from "./Components/Instrument";
-import TransportControl from "./Components/TransportControl";
+import Transport from "./Components/Transport";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <React.Fragment>
-      <TransportControl />
+      <Transport />
       <Instrument />
     </React.Fragment>
   );
