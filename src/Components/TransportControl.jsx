@@ -5,6 +5,8 @@ import { Transport } from "tone";
 import * as Tone from "tone";
 import { PausePlay } from "./pausePlay";
 import { InstrumentPannel } from "./InstrumentPannel";
+import { Kick } from "../Engines/Kick";
+import { Snare } from "../Engines/Snare";
 
 export class TransportControl extends React.Component {
   constructor(props) {

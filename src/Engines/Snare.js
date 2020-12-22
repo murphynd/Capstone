@@ -27,6 +27,18 @@ export class Snare {
     this.osc.connect(this.oscEnvelope);
     this.oscEnvelope.connect(this.ctx.destination);
   }
+  noiseBuffer() {
+    var bufferSize = this.ctx.sampleRate;
+    var buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+    var output = buffer.getChannelData(0);
+
+    for (var i = 0; i < bufferSize; i++) {
+      output[i] = Math.random() * 2 - 1;
+    }
+
+    return buffer;
+  }
+
   trigger(time) {
     if (this.volume === 0) {
       return;
