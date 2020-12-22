@@ -6,6 +6,7 @@ import * as Tone from "tone";
 import { PausePlay } from "./pausePlay";
 import { InstrumentPannel } from "./InstrumentPannel";
 import { BPM } from "./bpm";
+import "./TransportControl.css";
 
 export class TransportControl extends React.Component {
   constructor(props) {
@@ -91,45 +92,60 @@ export class TransportControl extends React.Component {
 
     return (
       <>
-        <h1 style={{ color: "#e96905" }}>ThumP</h1>
-        <PausePlay play={this.play} pause={this.pause} />
-        <p>audio ctx clock: {Tone.now()}</p>
-        <p>transport clock: {Tone.Transport.seconds}</p>
-        <BPM handleChange={this.handlebpmChange} value={this.state.bpm} />
-        <InstrumentPannel
-          steps={this.state.steps}
-          selectedInstrument={this.state.selected}
-        >
-          <Instrument
-            key="Bass"
-            engine="Bass"
-            handleClick={this.selectInstrument}
-          />
-          <Instrument
-            key="Kick"
-            engine="Kick"
-            handleClick={this.selectInstrument}
-          />
-          <Instrument
-            key="Snare"
-            engine="Snare"
-            handleClick={this.selectInstrument}
-          />
-          <Instrument
-            key="HiHat"
-            engine="HiHat"
-            handleClick={this.selectInstrument}
-          />
-          <Instrument
-            key="Clap"
-            engine="Clap"
-            handleClick={this.selectInstrument}
-          />
-        </InstrumentPannel>
-        <Steps
-          handleStepChange={this.handleStepChange}
-          steps={this.state.steps}
-        />
+        <div className="machine">
+          <div className="machineIcon">
+            <div className="icon">T</div>
+            <div className="title">Thump</div>
+          </div>
+          <div className="settings">
+            <p>audio ctx clock: {Tone.now()}</p>
+            <p>transport clock: {Tone.Transport.seconds}</p>
+            <BPM handleChange={this.handlebpmChange} value={this.state.bpm} />
+
+            <InstrumentPannel
+              steps={this.state.steps}
+              selectedInstrument={this.state.selected}
+            >
+              <Instrument
+                key="Bass"
+                engine="Bass"
+                handleClick={this.selectInstrument}
+              />
+              <Instrument
+                key="Kick"
+                engine="Kick"
+                handleClick={this.selectInstrument}
+              />
+              <Instrument
+                key="Snare"
+                engine="Snare"
+                handleClick={this.selectInstrument}
+              />
+              <Instrument
+                key="HiHat"
+                engine="HiHat"
+                handleClick={this.selectInstrument}
+              />
+              <Instrument
+                key="Clap"
+                engine="Clap"
+                handleClick={this.selectInstrument}
+              />
+            </InstrumentPannel>
+          </div>
+          <div className="composerTitle">
+            <h1> Rhythem Composer TH-704</h1>
+          </div>
+          <p>Computer Controlled</p>
+
+          <div className="rhythem">
+            <PausePlay play={this.play} pause={this.pause} />
+            <Steps
+              handleStepChange={this.handleStepChange}
+              steps={this.state.steps}
+            />
+          </div>
+        </div>
       </>
     );
   }
