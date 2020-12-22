@@ -5,7 +5,8 @@ export class Step extends React.Component {
     const style = {
       width: "3em",
       height: "5em",
-      backgroundColor: this.props.on ? "#2AC7DC" : "#CBCBCB",
+      backgroundColor: this.props.on ? "#fef1ac" : "#febf01",
+      boxShadow: "2px 2px 5px #222",
       borderRadius: "10px",
       margin: 5,
       display: "inline-block",

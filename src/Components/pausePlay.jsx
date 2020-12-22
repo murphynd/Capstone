@@ -1,5 +1,4 @@
 import React from "react";
-import * as Tone from "tone";
 export class PausePlay extends React.Component {
   constructor(props) {
     super(props);

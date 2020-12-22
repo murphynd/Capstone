@@ -37,11 +37,11 @@ export class TransportControl extends React.Component {
     console.log(this.state);
   }
   pause = () => {
-    Transport.stop();
+    Tone.Transport.stop();
   };
   play = () => {
     Tone.start();
-    Transport.start();
+    Tone.Transport.start(0);
   };
   handlebpmChange = (bpm) => {
     Transport.bpm.value = bpm;
@@ -90,14 +90,21 @@ export class TransportControl extends React.Component {
     console.log("the state:", this.state);
 
     return (
-      <div>
-        <h1 style={{ color: "black" }}>ThumP</h1>
+      <>
+        <h1 style={{ color: "#e96905" }}>ThumP</h1>
         <PausePlay play={this.play} pause={this.pause} />
+        <p>audio ctx clock: {Tone.now()}</p>
+        <p>transport clock: {Tone.Transport.seconds}</p>
         <BPM handleChange={this.handlebpmChange} value={this.state.bpm} />
         <InstrumentPannel
           steps={this.state.steps}
           selectedInstrument={this.state.selected}
         >
+          <Instrument
+            key="Bass"
+            engine="Bass"
+            handleClick={this.selectInstrument}
+          />
           <Instrument
             key="Kick"
             engine="Kick"
@@ -123,7 +130,7 @@ export class TransportControl extends React.Component {
           handleStepChange={this.handleStepChange}
           steps={this.state.steps}
         />
-      </div>
+      </>
     );
   }
 }

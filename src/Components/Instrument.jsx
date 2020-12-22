@@ -4,6 +4,8 @@ import { Transport, Time } from "tone";
 import { Snare } from "../Engines/Snare";
 import { HiHat } from "../Engines/HiHat";
 import { Clap } from "../Engines/Clap";
+import { Bass } from "../Engines/Bass";
+import * as Tone from "tone";
 
 export class Instrument extends React.Component {
   constructor(props) {
@@ -31,6 +33,9 @@ export class Instrument extends React.Component {
       ],
     };
     switch (props.engine) {
+      case "Bass":
+        this.sound = new Bass(this.ctx);
+        break;
       case "Kick":
         this.sound = new Kick(this.ctx);
         break;
@@ -76,12 +81,14 @@ export class Instrument extends React.Component {
   render() {
     const InstrumentStyle = {
       height: "3em",
+      width: "3em",
       margin: "0.2em",
       borderRadius: 10,
       padding: 5,
-      backgroundColor: this.props.selected ? "#2AC7DC" : "#696969",
-      color: "white",
+      backgroundColor: this.props.selected ? "#f3102c" : "#d1d6d5",
+      color: this.props.selected ? "#e9e8e9" : "#101010",
       boxShadow: "2px 2px 5px #222",
+      display: "inline-block",
     };
     return (
       <div style={InstrumentStyle} onClick={this.handleClick}>
