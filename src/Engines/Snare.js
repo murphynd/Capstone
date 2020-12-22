@@ -40,7 +40,7 @@ export class Snare {
   }
 
   trigger(time) {
-    if (this.volume === 0) {
+    if (this.volume == 0) {
       return;
     }
     this.setup();
@@ -57,8 +57,8 @@ export class Snare {
       0.01 * this.volume,
       time + this.decay / 2
     );
-
     this.osc.start(time);
+
     this.osc.stop(time + this.decay);
     this.noise.stop(time + this.decay);
   }
