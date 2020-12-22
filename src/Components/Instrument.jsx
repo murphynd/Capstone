@@ -2,6 +2,8 @@ import React from "react";
 import { Kick } from "../Engines/Kick";
 import { Transport, Time } from "tone";
 import { Snare } from "../Engines/Snare";
+import { HiHat } from "../Engines/HiHat";
+import { Clap } from "../Engines/Clap";
 
 export class Instrument extends React.Component {
   constructor(props) {
@@ -34,6 +36,12 @@ export class Instrument extends React.Component {
         break;
       case "Snare":
         this.sound = new Snare(this.ctx);
+        break;
+      case "HiHat":
+        this.sound = new HiHat(this.ctx);
+        break;
+      case "Clap":
+        this.sound = new Clap(this.ctx);
         break;
     }
   }
