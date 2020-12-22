@@ -1,4 +1,5 @@
 import React from "react";
+import * as Tone from "tone";
 export class PausePlay extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +16,7 @@ export class PausePlay extends React.Component {
   render() {
     return (
       <button onClick={this.handleClick}>
-        {this.state.playing ? "pause" : "play"}
+        {this.state.playing ? "Pause" : "Play"}
       </button>
     );
   }

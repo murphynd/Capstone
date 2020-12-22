@@ -7,7 +7,7 @@ export class Instrument extends React.Component {
   constructor(props) {
     super(props);
     this.ctx = new AudioContext();
-    this.sound = new Kick(this.ctx);
+    // this.sound = new Kick(this.ctx);
     this.state = {
       steps: [
         false,
@@ -36,8 +36,8 @@ export class Instrument extends React.Component {
         this.sound = new Snare(this.ctx);
         break;
     }
-    Transport.loop = true;
-    Transport.loopEnd = "1m";
+    // Transport.loop = true;
+    // Transport.loopEnd = "1m";
   }
   componentDidUpdate() {
     if (this.props.steps && !areEqual(this.props.steps, this.state.steps)) {
@@ -68,9 +68,18 @@ export class Instrument extends React.Component {
   };
 
   render() {
+    const InstrumentStyle = {
+      height: "3em",
+      margin: "0.2em",
+      borderRadius: 10,
+      padding: 5,
+      backgroundColor: "red",
+      color: "white",
+      boxShadow: "2px 2px 5px #222",
+    };
     return (
-      <div>
-        <button onClick={this.handleClick}>Instrument</button>
+      <div style={InstrumentStyle} onClick={this.handleClick}>
+        <p>{this.props.engine}</p>
       </div>
     );
   }

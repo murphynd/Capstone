@@ -5,24 +5,27 @@ export class InstrumentPannel extends React.Component {
     super(props);
   }
   render() {
+    console.log("the selected is ", this.props.selectedInstrument);
     const childrenWithProps = React.Children.map(
       this.props.children,
       (child) => {
-        if (child.key === this.props.selectedInstruemnt) {
-          return React.cloneElement(child, {
-            steps: this.props.steps,
-            selected: true,
-          });
-        } else {
-          return React.cloneElement(child, {
-            steps: null,
-            selected: false,
-          });
+        if (child) {
+          if (child.key === this.props.selectedInstruemnt) {
+            return React.cloneElement(child, {
+              steps: this.props.steps,
+              selected: true,
+            });
+          } else {
+            return React.cloneElement(child, {
+              steps: null,
+              selected: false,
+            });
+          }
         }
-
         return child;
       }
     );
+
     return (
       <div
         style={{
@@ -32,7 +35,6 @@ export class InstrumentPannel extends React.Component {
         }}
       >
         {childrenWithProps}
-        {/* {this.props.children} */}
       </div>
     );
   }

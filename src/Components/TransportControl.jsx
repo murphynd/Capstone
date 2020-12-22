@@ -28,7 +28,10 @@ export class TransportControl extends React.Component {
         false,
         false,
       ],
+      selected: null,
     };
+    Transport.loop = true;
+    Transport.loopEnd = "1m";
   }
   pause = () => {
     Transport.stop();
@@ -45,13 +48,53 @@ export class TransportControl extends React.Component {
       steps: s,
     });
   };
+  selectInstrument = (selected, steps) => {
+    if (this.state.selected === selected) {
+      this.setState({
+        selected: null,
+        steps: [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+        ],
+      });
+    } else {
+      this.setState({ selected, steps });
+    }
+  };
+
   render() {
     return (
       <div>
         <h1 style={{ color: "black" }}>ThumP</h1>
         <PausePlay play={this.play} pause={this.pause} />
-        <InstrumentPannel steps={this.state.steps}>
-          <Instrument />
+        <InstrumentPannel
+          steps={this.state.steps}
+          selectedInstrument={this.state.selected}
+        >
+          <Instrument
+            key="Kick"
+            engine="Kick"
+            handleClick={this.selectInstrument}
+          />
+          <Instrument
+            key="Snare"
+            engine="Snare"
+            handleClick={this.selectInstrument}
+          />
         </InstrumentPannel>
         <Steps
           handleStepChange={this.handleStepChange}
