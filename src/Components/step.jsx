@@ -14,5 +14,6 @@ export class Step extends React.Component {
   }
   handleClick = () => {
     this.props.onClick(this.props.id);
+    console.log("from steps:", this.props, this.props.id);
   };
 }

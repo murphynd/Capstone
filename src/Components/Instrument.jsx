@@ -7,7 +7,7 @@ export class Instrument extends React.Component {
   constructor(props) {
     super(props);
     this.ctx = new AudioContext();
-    // this.sound = new Kick(this.ctx);
+    this.sound = new Kick(this.ctx);
     this.state = {
       steps: [
         false,
@@ -36,8 +36,6 @@ export class Instrument extends React.Component {
         this.sound = new Snare(this.ctx);
         break;
     }
-    // Transport.loop = true;
-    // Transport.loopEnd = "1m";
   }
   componentDidUpdate() {
     if (this.props.steps && !areEqual(this.props.steps, this.state.steps)) {

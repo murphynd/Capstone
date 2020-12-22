@@ -32,6 +32,7 @@ export class TransportControl extends React.Component {
     };
     Transport.loop = true;
     Transport.loopEnd = "1m";
+    console.log(this.state);
   }
   pause = () => {
     Transport.stop();
@@ -77,6 +78,10 @@ export class TransportControl extends React.Component {
   };
 
   render() {
+    console.log("engine ", this.state.engine);
+    console.log("setps", this.state.steps);
+    console.log("KickSteps", this.state.selectedInstrument);
+
     return (
       <div>
         <h1 style={{ color: "black" }}>ThumP</h1>
