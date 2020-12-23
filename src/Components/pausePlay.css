@@ -1,0 +1,11 @@
+button.play {
+  width: 5em;
+  height: 5em;
+  background-color: #fef1ac;
+  border-right: 10px solid #c7bd89;
+  border-left: 5px solid #c7bd89;
+  border-top: 5px solid #c7bd89;
+  border-bottom: 10px solid #c7bd89;
+  color: #403f4d;
+  position: absolute;
+}

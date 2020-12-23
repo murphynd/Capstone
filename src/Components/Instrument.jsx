@@ -85,8 +85,7 @@ export class Instrument extends React.Component {
       margin: "0.2em",
       borderRadius: 10,
       padding: 5,
-      backgroundColor: this.props.selected ? "#f3102c" : "#d1d6d5",
-      color: this.props.selected ? "#e9e8e9" : "#101010",
+      backgroundColor: this.props.selected ? "#f3102c" : "#fef1ac",
       boxShadow: "2px 2px 5px #222",
       display: "inline-block",
     };

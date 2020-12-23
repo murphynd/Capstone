@@ -1,5 +1,6 @@
 import React from "react";
 import { Step } from "./step";
+import "./step.css";
 
 export class Steps extends React.Component {
   constructor(props) {

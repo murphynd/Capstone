@@ -1,4 +1,6 @@
 import React from "react";
+import "./pausePlay.css";
+
 export class PausePlay extends React.Component {
   constructor(props) {
     super(props);
@@ -14,8 +16,8 @@ export class PausePlay extends React.Component {
   };
   render() {
     return (
-      <button onClick={this.handleClick}>
-        {this.state.playing ? "Pause" : "Play"}
+      <button className="play" onClick={this.handleClick}>
+        {this.state.playing ? "Stop" : "START"}
       </button>
     );
   }

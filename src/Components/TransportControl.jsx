@@ -98,8 +98,6 @@ export class TransportControl extends React.Component {
             <div className="title">Thump</div>
           </div>
           <div className="settings">
-            <p>audio ctx clock: {Tone.now()}</p>
-            <p>transport clock: {Tone.Transport.seconds}</p>
             <BPM handleChange={this.handlebpmChange} value={this.state.bpm} />
 
             <InstrumentPannel
@@ -136,8 +134,7 @@ export class TransportControl extends React.Component {
           <div className="composerTitle">
             <h1> Rhythem Composer TH-704</h1>
           </div>
-          <p>Computer Controlled</p>
-
+          <div className="cc">Computer Controlled</div>
           <div className="rhythem">
             <PausePlay play={this.play} pause={this.pause} />
             <Steps

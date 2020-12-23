@@ -10,7 +10,7 @@ h1 {
   float: left;
 }
 p {
-  color: #d1d6d5;
+  color: #101010;
 }
 .machineIcon {
   padding: 40px;
@@ -50,6 +50,7 @@ p {
   padding: 0px;
   width: auto;
   margin: 0px;
+
   object-position: right;
   border-bottom: 1px solid #fe4d06;
 }
@@ -59,4 +60,8 @@ p {
   width: auto;
   padding: 50px;
   border-radius: "10px";
+  float: none;
+}
+.cc {
+  color: #d1d6d5;
 }

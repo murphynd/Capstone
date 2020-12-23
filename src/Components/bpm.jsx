@@ -1,4 +1,5 @@
 import React from "react";
+import "./bpm.css";
 
 export class BPM extends React.Component {
   handleBPM = (e) => {
@@ -10,14 +11,13 @@ export class BPM extends React.Component {
   render() {
     return (
       <>
-        <label>BPM</label>
         <input
           type="number"
           value={this.props.value}
           onChange={this.handleBPM}
           className="bpm"
         />
-        <h1> hello this is the bpm</h1>
+        <h1> bpm</h1>
       </>
     );
   }

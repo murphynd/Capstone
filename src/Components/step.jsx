@@ -1,4 +1,5 @@
 import React from "react";
+import "./step.css";
 
 export class Step extends React.Component {
   render() {
@@ -10,6 +11,8 @@ export class Step extends React.Component {
       borderRadius: "10px",
       margin: 5,
       display: "inline-block",
+      position: "relative",
+      left: "90px",
     };
     return <div style={style} onClick={this.handleClick}></div>;
   }

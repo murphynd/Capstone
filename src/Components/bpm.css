@@ -1,0 +1,9 @@
+.bpm {
+  color: #fe4d06;
+  border: 0;
+}
+input[type="number"] {
+  padding: 10px;
+  font-size: x-large;
+  background-color: #fef1ac;
+}
