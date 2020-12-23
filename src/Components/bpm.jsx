@@ -17,7 +17,7 @@ export class BPM extends React.Component {
           onChange={this.handleBPM}
           className="bpm"
         />
-        <h1> bpm</h1>
+        <h1>Tempo</h1>
       </>
     );
   }

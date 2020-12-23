@@ -23,7 +23,7 @@ export class Kick {
     this.osc.frequency.exponentialRampToValueAtTime(1, time, this.decay);
     this.gain.gain.linearRampToValueAtTime(0, time + this.decay + 0.1);
     this.osc.start(time);
-    this.osc.stop(time + this.decay + 0.1);
+    this.osc.stop(time + this.decay);
   }
   setTone = (tone) => {
     this.tone = tone;

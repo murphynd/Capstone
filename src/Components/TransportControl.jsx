@@ -134,7 +134,7 @@ export class TransportControl extends React.Component {
             </div>
           </div>
           <div className="composerTitle">
-            <h1> Rhythem Composer TH-704</h1>
+            <h1> Rhythm Composer TH-704</h1>
           </div>
           <div className="cc">Computer Controlled</div>
           <div className="rhythem">
