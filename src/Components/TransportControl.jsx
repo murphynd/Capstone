@@ -95,7 +95,7 @@ export class TransportControl extends React.Component {
         <div className="machine">
           <div className="machineIcon">
             <div className="icon">T</div>
-            <div className="title">Thump</div>
+            <div className="title">ThumP</div>
           </div>
           <div className="settings">
             <BPM handleChange={this.handlebpmChange} value={this.state.bpm} />
