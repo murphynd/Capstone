@@ -88,10 +88,11 @@ export class Instrument extends React.Component {
       backgroundColor: this.props.selected ? "#f3102c" : "#fef1ac",
       boxShadow: "2px 2px 5px #222",
       display: "inline-block",
+      textAlign: "center",
     };
     return (
       <div style={InstrumentStyle} onClick={this.handleClick}>
-        <p>{this.props.engine}</p>
+        {this.props.engine}
       </div>
     );
   }

@@ -6,4 +6,5 @@ input[type="number"] {
   padding: 10px;
   font-size: x-large;
   background-color: #fef1ac;
+  border-radius: 10px;
 }

@@ -99,37 +99,39 @@ export class TransportControl extends React.Component {
           </div>
           <div className="settings">
             <BPM handleChange={this.handlebpmChange} value={this.state.bpm} />
-
-            <InstrumentPannel
-              steps={this.state.steps}
-              selectedInstrument={this.state.selected}
-            >
-              <Instrument
-                key="Bass"
-                engine="Bass"
-                handleClick={this.selectInstrument}
-              />
-              <Instrument
-                key="Kick"
-                engine="Kick"
-                handleClick={this.selectInstrument}
-              />
-              <Instrument
-                key="Snare"
-                engine="Snare"
-                handleClick={this.selectInstrument}
-              />
-              <Instrument
-                key="HiHat"
-                engine="HiHat"
-                handleClick={this.selectInstrument}
-              />
-              <Instrument
-                key="Clap"
-                engine="Clap"
-                handleClick={this.selectInstrument}
-              />
-            </InstrumentPannel>
+            <div className="inst">
+              <InstrumentPannel
+                steps={this.state.steps}
+                selectedInstrument={this.state.selected}
+              >
+                <Instrument
+                  key="Bass"
+                  engine="Bass"
+                  handleClick={this.selectInstrument}
+                />
+                <Instrument
+                  key="Kick"
+                  engine="Kick"
+                  handleClick={this.selectInstrument}
+                />
+                <Instrument
+                  key="Snare"
+                  engine="Snare"
+                  handleClick={this.selectInstrument}
+                />
+                <Instrument
+                  key="HiHat"
+                  engine="HiHat"
+                  handleClick={this.selectInstrument}
+                />
+                <Instrument
+                  key="Clap"
+                  engine="Clap"
+                  handleClick={this.selectInstrument}
+                />
+                <h1> Instrument</h1>
+              </InstrumentPannel>
+            </div>
           </div>
           <div className="composerTitle">
             <h1> Rhythem Composer TH-704</h1>
