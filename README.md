@@ -1,70 +1,199 @@
-# Getting Started with Create React App
+<br>
+<p align="center">
+  <u><big>||&emsp;<b><u>ThumP</u></b>&emsp;||</big></u>
+</p>
+<p align="center">
+    <!-- Project Avatar/Logo -->
+    <br>
+    <a href="https://github.com/Murphynd">
+        <img style="border-radius: 100%" src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/clinking-beer-mugs.png">
+    </a>
+    <p align="center">
+      ___________________________
+    </p>
+    <!-- GitHub Link -->
+    <p align="center">
+        <a href="https://github.com/murphynd">
+            <strong>MurphyND</strong>
+        </a>
+    </p>
+    <!-- Project Shields -->
+    <p align="center">
+        <a href="https://github.com/murphynd/TapRoom/issues">
+            <img src="https://img.shields.io/github/issues/LondresRi/README-Assistance?style=plastic">
+        </a>
+        ¨
+        <a href="https://opensource.org/licenses/MIT">
+            <img src="https://img.shields.io/github/license/LondresRi/README-Assistance?color=orange&style=plastic">
+        </a>
+        ¨
+        <a href="https://linkedin.com/in/nataliedoraismurphy">
+            <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=linkedin&colorB=2867B2">
+        </a>
+    </p>    
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <small>Initiated Dec 10th, 2020.</small>
+  <br>
+  <small>By Natalie Murphy</small>
+</p>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 About the Project
 
-### `npm start`
+### 📖 Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### THumP
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##### Description
 
-### `npm test`
+Online Drum Machine, Mobile forward in design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Use Case
 
-### `npm run build`
+- Creators can make beats and play with effects
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- When Creators “Create a project” and they can choose tools to use while in a creative process.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Play with the musical tools and save what you build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Open on Mobile Device and play
 
-### `npm run eject`
+##### Minimum Viable Product
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- User registration (database storage)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- User login/sign-out (with database authentication)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Capability to make sick beats
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Capability to save a play session
 
-## Learn More
+##### Tools for MVP
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- VisualStudio Code
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Tone.JS
 
-### Code Splitting
+- WebAudio API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React.js/JavaScript
 
-### Analyzing the Bundle Size
+- Jest Testing Framework
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##### Additional Features
 
-### Making a Progressive Web App
+- Ability to share projects with others
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Follow others
 
-### Advanced Configuration
+- Ha-ve a feed of other creations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Sy-nth
 
-### Deployment
+- Record music
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Create an API that can load prefab projects
 
-### `npm run build` fails to minify
+- User authentication (database, Facebook, Google)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Tools for Additional Features
+- Facebook Authentication
+
+- Google Authentication
+
+- Many of the same tools + more time
+
+##### Additional Information
+
+- I want to try my hand at creating a music-making product, I had so much fun during team week but I was mainly working on the C# side of the project and building out the framework. I did lots of research on the topic and I feel like this would be a great project to dive in and actually write some music-making tools myself. My main goals are to focus on making this a mobile-friendly app and to fully deploy it. I want to have user authentication and have the ability to save. this to be a real site that users can share with their friends on their phones.
+
+Really excited to make some noise with THumP
+<img src="https://raw.githubusercontent.com/murphynd/TapRoom/master/TapRoom%20Diagram.png">
+
+### 🦠 Known Bugs
+
+- None known yet. <a href="https://github.com/murphynd/TapRoom/issues">Please report if you discover any.</a>
+
+### 🛠 Built With
+
+- [Tone.js](https://tonejs.github.io/)
+- [React](https://reactjs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [HTML5](https://html.com/html5/)
+- [Markdown](https://daringfireball.net/projects/markdown/)
+
+---
+
+## 🏁 Getting Started
+
+### 📋 Prerequisites
+
+### Interactive Development Environment
+
+&emsp;To view or edit the document which may include some HTML code, you will need an code editor or text editor. The popular open-source choices for an code editor are Atom and VisualStudio Code.
+
+1. Code Editor Download:
+   - Option 1: [Atom](https://nodejs.org/en/)
+   - Option 2: [VisualStudio Code](https://www.npmjs.com/)
+2. Click the download most applicable to your OS and system.
+3. Wait for download to complete, then install -- Windows will run the setup exe and macOS will drag and drop into applications.
+4. Optionally, create a [GitHub Account](https://github.com)
+
+### ⚙️ Setup and Use
+
+---
+
+### 🤝 Contributors
+
+| Author                                             |                 GitHub                  |                              Email                              |
+| -------------------------------------------------- | :-------------------------------------: | :-------------------------------------------------------------: |
+| [Natalie Murphy](https://linkedin.com/in/murphynd) | [Murphynd](https://github.com/Murphynd) | [NatalieMurphy500@gmail.com](mailto:nataliemurphy500@gmail.com) |
+
+---
+
+### ✉️ Contact and Support
+
+## If you have any feedback or concerns, please contact one of the contributors.
+
+### ⚖️ License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2020 Natalie Murphy. All Rights Reserved.
+
+```
+MIT License
+
+Copyright (c) 2020 Natalie Murphy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+### 🌟 Acknowledgments
+
+#### [Epicodus](https://www.epicodus.com/)
+
+> "A school for tech careers... to help people learn the skills they need to get great jobs."
+
+---
+
+<center><a href="#">Return to Top</a></center>
