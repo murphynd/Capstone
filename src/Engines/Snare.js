@@ -1,66 +1,29 @@
 export class Snare {
   constructor(ctx) {
     this.ctx = ctx;
-    this.tone = 100;
-    this.decay = 0.2;
+    this.tone = 500;
+    this.decay = 0.5;
     this.volume = 1;
   }
 
   setup() {
-    this.noise = this.ctx.createBufferSource();
-    this.noise.buffer = this.noiseBuffer();
-
-    let noiseFilter = this.ctx.createBiquadFilter();
-    noiseFilter.type = "highpass";
-    noiseFilter.frequency.value = 1000;
-    this.noise.connect(noiseFilter);
-
-    this.noiseEnvelope = this.ctx.createGain();
-    noiseFilter.connect(this.noiseEnvelope);
-
-    this.noiseEnvelope.connect(this.ctx.destination);
-
     this.osc = this.ctx.createOscillator();
-    this.osc.type = "triangle";
-
-    this.oscEnvelope = this.ctx.createGain();
-    this.osc.connect(this.oscEnvelope);
-    this.oscEnvelope.connect(this.ctx.destination);
+    this.gain = this.ctx.createGain();
+    this.osc.connect(this.gain);
+    this.gain.connect(this.ctx.destination);
   }
-  noiseBuffer() {
-    var bufferSize = this.ctx.sampleRate;
-    var buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
-    var output = buffer.getChannelData(0);
-
-    for (var i = 0; i < bufferSize; i++) {
-      output[i] = Math.random() * 2 - 1;
-    }
-
-    return buffer;
-  }
-
   trigger(time) {
-    if (this.volume == 0) {
+    if (this.volume === 0) {
       return;
     }
     this.setup();
-    this.noiseEnvelope.gain.setValueAtTime(this.volume, time);
-    this.noiseEnvelope.gain.exponentialRampToValueAtTime(
-      0.01,
-      time + this.decay
-    );
-    this.noise.start(time);
 
-    this.osc.frequency.setValueAtTime(this.tone, time);
-    this.oscEnvelope.gain.setValueAtTime(0.7 * this.volume, time);
-    this.oscEnvelope.gain.exponentialRampToValueAtTime(
-      0.01 * this.volume,
-      time + this.decay / 2
-    );
+    this.osc.frequency.setValueAtTime(this.tone, time + 0.001);
+    this.gain.gain.linearRampToValueAtTime(this.volume, time + 0.01);
+    this.osc.frequency.exponentialRampToValueAtTime(1, time, this.decay);
+    this.gain.gain.linearRampToValueAtTime(0, time + this.decay + 0.1);
     this.osc.start(time);
-
-    this.osc.stop(time + this.decay);
-    this.noise.stop(time + this.decay);
+    this.osc.stop(time + this.decay + 0.1);
   }
   setTone = (tone) => {
     this.tone = tone;
