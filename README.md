@@ -6,7 +6,7 @@
     <!-- Project Avatar/Logo -->
     <br>
     <a href="https://github.com/Murphynd">
-        <img style="border-radius: 100%" src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/clinking-beer-mugs.png">
+        <img style="border-radius: 100%" src="https://raw.githubusercontent.com/murphynd/Capstone/main/public/imgs/apple-touch-icon.png">
     </a>
     <p align="center">
       ___________________________
@@ -111,7 +111,20 @@ Online Drum Machine, Mobile forward in design
 - I want to try my hand at creating a music-making product, I had so much fun during team week but I was mainly working on the C# side of the project and building out the framework. I did lots of research on the topic and I feel like this would be a great project to dive in and actually write some music-making tools myself. My main goals are to focus on making this a mobile-friendly app and to fully deploy it. I want to have user authentication and have the ability to save. this to be a real site that users can share with their friends on their phones.
 
 Really excited to make some noise with THumP
-<img src="https://raw.githubusercontent.com/murphynd/TapRoom/master/TapRoom%20Diagram.png">
+
+<img src="https://raw.githubusercontent.com/murphynd/Capstone/main/public/imgs/layout.png">
+
+color Pallete:
+
+<img src="https://raw.githubusercontent.com/murphynd/Capstone/main/public/imgs/Screen%20Shot%202020-12-22%20at%204.03.56%20PM.png">
+
+inspo:
+
+<img src="https://raw.githubusercontent.com/murphynd/Capstone/main/public/imgs/808-Header.jpg">
+
+ScreenShot:
+
+<img src="https://raw.githubusercontent.com/murphynd/Capstone/main/public/imgs/Screen%20Shot%202020-12-22%20at%204.40.49%20PM.png">
 
 ### 🦠 Known Bugs
 
@@ -146,11 +159,12 @@ Really excited to make some noise with THumP
 
 ---
 
-### 🤝 Contributors
+### 🤝 Resources
 
-| Author                                             |                 GitHub                  |                              Email                              |
-| -------------------------------------------------- | :-------------------------------------: | :-------------------------------------------------------------: |
-| [Natalie Murphy](https://linkedin.com/in/murphynd) | [Murphynd](https://github.com/Murphynd) | [NatalieMurphy500@gmail.com](mailto:nataliemurphy500@gmail.com) |
+| Author                                |                                                    Link                                                    |
+| ------------------------------------- | :--------------------------------------------------------------------------------------------------------: |
+| Gabriel Yshay                         | [Medium Article - Drum Machine](https://medium.com/@gabrielyshay/creating-a-web-drum-machine-e24843e4392a) |
+| [Dan Tramte](www.twitter.com/datramt) |                 [the Audio Programmer](https://www.youtube.com/watch?v=mmluIbsmvoY&t=25s)                  |
 
 ---
 
