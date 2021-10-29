@@ -74,8 +74,7 @@ export class Instrument extends React.Component {
   };
 
   handleClick = () => {
-    if (this.props.handleClick)
-      this.props.handleClick(this.props.engine, this.state.steps.slice(0));
+    this.props.handleClick(this.props.engine, this.state.steps.slice(0));
   };
 
   render() {

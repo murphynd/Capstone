@@ -35,7 +35,6 @@ export class TransportControl extends React.Component {
     };
     Transport.loop = true;
     Transport.loopEnd = "1m";
-    console.log(this.state);
   }
   pause = () => {
     Tone.Transport.stop();
@@ -56,6 +55,7 @@ export class TransportControl extends React.Component {
       steps: s,
     });
   };
+
   selectInstrument = (selected, steps) => {
     if (this.state.selected === selected) {
       this.setState({
