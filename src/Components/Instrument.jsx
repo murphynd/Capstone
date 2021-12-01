@@ -12,26 +12,7 @@ export class Instrument extends React.Component {
     super(props);
     this.ctx = new AudioContext();
     this.sound = new Kick(this.ctx);
-    this.state = {
-      steps: [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-      ],
-    };
+  
     switch (props.engine) {
       case "Bass":
         this.sound = new Bass(this.ctx);

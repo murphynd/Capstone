@@ -21,28 +21,40 @@ export class TransportControl extends React.Component {
         false,
         false,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
       ],
       selected: null,
       bpm: 80,
+      isPlaying:false
     };
     Transport.loop = true;
     Transport.loopEnd = "1m";
   }
-  pause = () => {
-    Tone.Transport.stop();
-  };
-  play = () => {
-    Tone.start();
+
+  playPause = () => {
+
+    // Get state of song
+    let isPlaying = this.state.isPlaying;
+
+    if (isPlaying) {
+      // Pause the song if it is playing
+      Tone.Transport.stop();
+    } else {
+
+      // Play the song if it is paused
+      Tone.start();
     Tone.Transport.start(0);
+    }
+
+    // Change the state of song
+    this.setState({ isPlaying: !isPlaying });
   };
+  // pause = () => {
+  //   Tone.Transport.stop();
+  // };
+  // play = () => {
+  //   Tone.start();
+  //   Tone.Transport.start(0);
+  // };
   handlebpmChange = (bpm) => {
     Transport.bpm.value = bpm;
     this.setState({ bpm });
@@ -61,14 +73,6 @@ export class TransportControl extends React.Component {
       this.setState({
         selected: null,
         steps: [
-          false,
-          false,
-          false,
-          false,
-          false,
-          false,
-          false,
-          false,
           false,
           false,
           false,
@@ -138,7 +142,9 @@ export class TransportControl extends React.Component {
           </div>
           <div className="cc">Computer Controlled</div>
           <div className="rhythem">
-            <PausePlay play={this.play} pause={this.pause} />
+            <PausePlay 
+            isPlaying={this.state.isPlaying}
+            ActionButton={this.PausePlay} />
             <Steps
               handleStepChange={this.handleStepChange}
               steps={this.state.steps}
